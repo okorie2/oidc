@@ -49,6 +49,7 @@ nav .nav-logo img {
 }
 
 nav ul {
+  color: #FFFCFE;
   float: right;
   margin: 1.7rem 0rem 0 0;
   -webkit-transition: left .5s ease-in-out;
@@ -59,6 +60,7 @@ nav ul li {
   display: inline-block;
   padding: 2px 15px;
   margin: 0 1rem 0 0;
+  color: #FFFCFE;
 }
 
 nav ul li:last-child {
@@ -1261,7 +1263,7 @@ p.status, .info p span.status, .land-details {
   margin-bottom: 1.2rem;
 }
 
-a.register-btn, a.add-btn, .register-btn, a.add-btn, .add-btn, a:not([href]):not([tabindex]) {
+a.register-btn, a.add-btn, .register-btn, a.add-btn, .add-btn {
   background: #D86018;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -2406,9 +2408,9 @@ footer.dashboard a:last-child {
   margin: 0;
 }
 
-#sign-up-form {
+#sign-up-form, #sign-in-form {
   position: absolute;
-  top: 5%;
+  top: 24%;
   right: 11%;
   opacity: 1;
   pointer-events: none;

@@ -1,5 +1,11 @@
+import { useState } from "react"
+import { Link } from "react-router-dom";
+import SignIn from "./signIn"
+import Signup from "./signup";
+
 
 const Navbar = () => {
+    const [siginactive, toggleSignin] = useState(false)
     return (
         <>
             <nav id="navbars">
@@ -12,15 +18,16 @@ const Navbar = () => {
                         <div className="burger" />
                     </label>
                     <ul>
-                        <li><a href className="list-items">About</a></li>
-                        <li><a href className="list-items">Gallery</a></li>
-                        <li><a href className="list-items">Vendor</a></li>
-                        <li><a href="javascript:void(0)" className="list-items">Log in</a></li>
+                        <li><Link to="" className="list-items">About</Link></li>
+                        <li><Link to="" className="list-items">Gallery</Link></li>
+                        <li><Link to="" className="list-items">Vendor</Link></li>
+                        <li><Link to="" className="list-items">Log in</Link></li>
                     </ul>
-                    <a href="javascript:void(0)" className="login-btn">Log in</a>
+                    <Link to="" onClick={() => toggleSignin(!siginactive)} className="login-btn">Log in</Link>
                 </div>
             </nav>
 
+            <SignIn siginactive={siginactive} />
         </>
     )
 }
