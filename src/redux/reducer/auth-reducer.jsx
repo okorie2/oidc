@@ -6,7 +6,8 @@ const initialState = {
         lastName: '',
         email: '',
     },
-    formSubmitted: false
+    formSubmittedSuccess: true,
+    formSubmitError: false
 }
 
 const Authreducer = (state = initialState, action) => {
@@ -34,6 +35,16 @@ const Authreducer = (state = initialState, action) => {
             return {
                 ...state,
                 formSubmitted: action.payload.status
+            }
+        case Actiontypes.FORM_SUBMIT_SUCCESS:
+            return {
+                ...state,
+                formSubmittedSuccess: false
+            }
+        case Actiontypes.FORM_SUBMIT_FAILED:
+            return {
+                ...state,
+                formSubmitError: true
             }
         default:
             return state;

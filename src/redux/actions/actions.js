@@ -1,3 +1,4 @@
+import axios from "axios";
 import Actiontypes from "./constants";
 
 const Actions = {
@@ -5,6 +6,5 @@ const Actions = {
     updateProfileImage: (image) => ({ type: Types.UPDATE_PROFILE_PICTURE, payload: { image } }),
     updateProfile: (user) => ({ type: Types.UPDATE_USER, payload: { user } }),
     formSubmittionStatus: (status) => ({ type: Types.FORM_SUBMITION_STATUS, payload: { status } }),
-    login: (user) => ({ type: Types.LOGIN, payload: { user } })
-
+    login: (user) => ({ type: Types.LOGIN, payload: { user } }),
 }

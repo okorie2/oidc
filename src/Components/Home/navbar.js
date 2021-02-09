@@ -1,17 +1,17 @@
 import { useState } from "react"
 import { Link } from "react-router-dom";
-import SignIn from "./signIn"
-import Signup from "./signup";
+import SignIn from "../Auth/signIn"
+
 
 
 const Navbar = () => {
-    const [siginactive, toggleSignin] = useState(false)
+    const [signinactive, toggleSignin] = useState(false)
     return (
         <>
             <nav id="navbars">
                 <div className="container">
                     <div className="nav-logo">
-                        <a href="#"><img src="/Assets/Orange_Logos_White 1.png" alt className /></a>
+                    <Link to="/" ><img src="/Assets/Orange_Logos_White 1.png" alt className /></Link>
                     </div>
                     <input type="checkbox" name id="menu" />
                     <label htmlFor="menu" className="hamburger">
@@ -23,11 +23,11 @@ const Navbar = () => {
                         <li><Link to="" className="list-items">Vendor</Link></li>
                         <li><Link to="" className="list-items">Log in</Link></li>
                     </ul>
-                    <Link to="" onClick={() => toggleSignin(!siginactive)} className="login-btn">Log in</Link>
+                    <Link to="" onClick={() => toggleSignin(!signinactive)} className="login-btn">Log in</Link>
                 </div>
             </nav>
 
-            <SignIn siginactive={siginactive} />
+            <SignIn signinactive={signinactive} />
         </>
     )
 }

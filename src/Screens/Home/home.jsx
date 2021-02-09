@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import Navbar from "../../Components/Home/navbar";
-import Signup from '../../Components/Home/signup';
-
-const Home = () => {
+import Video from "../../Components/Home/video";
+import MainBtm from "../../Components/Home/main-btm";
+import Signup from '../../Components/Auth/signup';
+import Footer from '../../Components/Footer/footer';
+const Home = (props) => {
     const [signupactive, toggleSignup] = useState(false)
-
     return (
-        <>
+        <>  
+             <Navbar />
             <div className="main-intro-section">
                 <div className="intro-header">
                     <div className="container">
@@ -27,16 +29,19 @@ const Home = () => {
                             </div>
 
                             <div className="get-started">
-                                <button onClick={() => toggleSignup(!signupactive)} >Get Started Here</button>
+                                <button type="button" onClick={() => toggleSignup(!signupactive) } >Get Started Here</button>
                             </div>
 
                         </div>
                     </div>
                 </div>
 
-                {signupactive && <Signup />}
+                 <Signup signupactive={signupactive} />
             </div>
 
+            <Video/>
+            <MainBtm/>
+            <Footer/>
         </>
     );
 };

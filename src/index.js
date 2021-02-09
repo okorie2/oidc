@@ -8,6 +8,7 @@ import reportWebVitals from './reportWebVitals';
 import configureStore from './redux/store/store';
 
 const store = configureStore();
+store.subscribe(() => console.log(store.getState))
 ReactDOM.render(
 
   <React.StrictMode>
